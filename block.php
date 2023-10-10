@@ -20,10 +20,12 @@ function advbox_table_task()
         ->add_fields(array(
           Field::make('text', 'tarefa', __('Tarefa')),
           Field::make('text', 'pontuacao', __('Pontuação')),
+          Field::make('text', 'explicacao', __('Explicação')),
         ))
     ))
     ->set_icon('awards')
     ->set_render_callback(function ($fields) {
+      // Recupera o valor do campo 'tarefas'
       // Recupera o valor do campo 'tarefas'
       $tarefas = $fields['tarefas'];
 
@@ -35,9 +37,10 @@ function advbox_table_task()
         foreach ($tarefas as $tarefa) {
           $tarefa_nome = $tarefa['tarefa'];
           $tarefa_pontuacao = $tarefa['pontuacao'];
+          $tarefa_explicacao = $tarefa['explicacao'];
 
           echo '<tr>';
-          echo '<td>' . esc_html($tarefa_nome) . '</td>';
+          echo '<td class="tarefa">' . esc_html($tarefa_nome) . '<div class="tooltip">?<span class="tooltiptext">' . esc_html($tarefa_explicacao) . '</span></div>' . '</td>';
           echo '<td class="pontuacao">' . esc_html($tarefa_pontuacao) . '</td>';
           echo '</tr>';
         }
