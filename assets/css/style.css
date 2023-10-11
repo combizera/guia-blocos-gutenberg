@@ -1,8 +1,87 @@
-/* Cores */
-:root {
-  --blue: #095092;
-  --blue-light: #F8F9FC;
-  --grey: #ccc;
-  --black: #353535;
-  --white: #fff;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.075);
+  max-width: 800px;
+}
+table tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+table th {
+  background-color: #095092;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+}
+table td {
+  border-right: 1px solid #ccc;
+  padding: 10px 8px;
+  font-size: 1rem;
+}
+
+tr:nth-child(even) {
+  background-color: #F8F9FC;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.pontuacao {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+  padding-left: 8px;
+  background-color: #095092;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 20px;
+  width: 25px;
+  height: 25px;
+}
+.tooltip .tooltiptext {
+  font-size: 0.875rem;
+  color: #fff;
+  visibility: hidden;
+  width: 250px;
+  background-color: #353535;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #353535 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip:hover {
+  cursor: pointer;
 }

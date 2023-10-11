@@ -62,6 +62,6 @@ add_action('carbon_fields_register_fields', 'advbox_table_task');
 // CHAMANDO OS ESTILOS
 function enqueue_custom_styles()
 {
-  wp_enqueue_style('custom-table-styles', plugins_url('assets/css/styles.css', __FILE__));
+  wp_enqueue_style('custom-table-styles', plugins_url('assets/css/style.css', __FILE__));
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
