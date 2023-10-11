@@ -1,5 +1,47 @@
+// COLORS
 $blue: #095092;
 $blue-light: #F8F9FC;
 $grey: #ccc;
 $black: #353535;
 $white: #fff;
+
+// RESPONSIVE
+
+$container-xl: 1900px;
+$container-l: 1100px;
+$container-m: 960px;
+$container-s: 540px;
+
+// Responsividade
+@mixin responsive($device) {
+  @if $device == xl {
+    // For resolutions upper than 1900px
+    @media screen and (min-width: $container-xl) {
+      @content;
+    }
+  } @else if $device == l {
+    // For resolutions between 1140px and 1440px
+    @media screen and (max-width: $container-xl) and (min-width: $container-l) {
+      @content;
+    }
+  } @else if $device == m {
+    // For resolutions beetwen 960px and 1140px
+    @media screen and (max-width: $container-l) and (min-width: $container-m) {
+      @content;
+    }
+  } @else if $device == s {
+    // For resolutions less than 960px
+    @media screen and (max-width: $container-m) {
+      @content;
+    }
+  } @else if $device == xs {
+    // For resolutions less than 540px
+    @media screen and (max-width: $container-s) {
+      @content;
+    }
+  } @else {
+    @media screen and (max-width: $device) {
+      @content;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Plugin Name: Tabela de Pontuação
- * Text Domain: Tabela de Pontuação
+ * Plugin Name: Blocos Biblioteca - ADVBOX
+ * Text Domain: Blocos Biblioteca - ADVBOX
  */
 
 defined('ABSPATH') || exit;
@@ -30,7 +30,7 @@ function advbox_table_task()
       $tarefas = $fields['tarefas'];
 
       if (!empty($tarefas)) {
-        echo '<table>';
+        echo '<table class="table">';
         echo '<thead><tr><th>Tarefa</th><th>Pontuação</th></tr></thead>';
         echo '<tbody>';
 
