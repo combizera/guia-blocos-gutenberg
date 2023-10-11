@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "browser-sync": "^2.29.3",
+    "dotenv": "^16.3.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0"
+  },
+  "devDependencies": {
+    "sass": "^1.69.2"
+  }
+}
