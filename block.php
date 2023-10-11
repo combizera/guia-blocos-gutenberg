@@ -46,7 +46,15 @@ function advbox_table_task()
           $tarefa_explicacao = $tarefa['explicacao'];
 
           echo '<tr>';
-          echo '<td class="tarefa">' . esc_html($tarefa_nome) . '<div class="tooltip">?<span class="tooltiptext">' . esc_html($tarefa_explicacao) . '</span></div>' . '</td>';
+          echo '<td class="tarefa">' . esc_html($tarefa_nome);
+
+          // Verifica se há uma explicação para a tarefa
+          if (!empty($tarefa_explicacao)) {
+            echo '<div class="tooltip">?<span class="tooltiptext">' . esc_html($tarefa_explicacao) . '</span></div>';
+          }
+
+          echo '</td>';
+
           echo '<td class="pontuacao">' . esc_html($tarefa_pontuacao) . '</td>';
           echo '</tr>';
         }
