@@ -3,6 +3,13 @@
 /**
  * Plugin Name: Blocos Biblioteca - ADVBOX
  * Text Domain: Blocos Biblioteca - ADVBOX
+ * * Version: 1.0
+ * Author: Ygor Combi
+ * License: GPL
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Requires at least: 5.0
+ * Contributors: Equipe ADVBOX 🫰
+ * Requires PHP: 7.0
  */
 
 defined('ABSPATH') || exit;
@@ -25,7 +32,6 @@ function advbox_table_task()
     ))
     ->set_icon('awards')
     ->set_render_callback(function ($fields) {
-      // Recupera o valor do campo 'tarefas'
       // Recupera o valor do campo 'tarefas'
       $tarefas = $fields['tarefas'];
 

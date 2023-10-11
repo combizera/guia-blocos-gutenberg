@@ -5,7 +5,7 @@
   border: 1px solid #ccc;
   font-size: 1.125rem;
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.075);
-  max-width: 800px;
+  max-width: 900px;
 }
 .table tr {
   display: grid;
